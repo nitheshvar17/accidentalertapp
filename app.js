@@ -22,12 +22,11 @@ function sendManualSOS() {
     const phone = document.getElementById('userPhone').value || "No Phone";
     const mapsLink = `https://www.google.com/maps?q=${window.userLat},${window.userLng}`;
 
-    // REPLACE THE URL AND ENTRY NUMBERS BELOW
     const formURL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
     const formData = new FormData();
-    formData.append("entry.1111111", name);     
-    formData.append("entry.2222222", phone);    
-    formData.append("entry.3333333", mapsLink); 
+    formData.append("entry.1896504086", name);     
+    formData.append("entry.1355037888", phone);    
+    formData.append("entry.1429143010", mapsLink); 
 
     fetch(formURL, { method: "POST", body: formData, mode: "no-cors" })
     .then(() => { alert("Location shared with Emergency Services."); });
